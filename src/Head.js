@@ -16,6 +16,13 @@ function Home() {
         }, 0);
     });
 
+    var particleCount;
+    if (window.innerWidth > 800) {
+        particleCount = 100;
+    } else {
+        particleCount = window.innerWidth / 14;
+    }
+
     return (
         <div className="header">
             <Particles
@@ -29,7 +36,7 @@ function Home() {
                             },
                         },
                         number: {
-                            value: 60,
+                            value: particleCount,
                         },
                     },
                     interactivity: {
