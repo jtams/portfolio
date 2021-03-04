@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, forwardRef } from "react";
 import Particles from "react-particles-js";
+import Button from "@material-ui/core/Button";
 import "./Head.css";
 
-function Home() {
+const Home = forwardRef((props, ref) => {
     const [titleSlide, setTitleSlide] = React.useState("name-start-animation-begin");
     const [titleSlide2, setTitleSlide2] = React.useState("name-start-animation-begin");
 
@@ -17,10 +18,10 @@ function Home() {
     });
 
     var particleCount;
-    if (window.innerWidth > 800) {
+    if (window.innerWidth > 1000) {
         particleCount = 100;
     } else {
-        particleCount = window.innerWidth / 14;
+        particleCount = window.innerWidth / 20;
     }
 
     return (
@@ -43,7 +44,7 @@ function Home() {
                         events: {
                             onhover: {
                                 enable: true,
-                                mode: "repulse",
+                                mode: "attract",
                             },
                         },
                     },
@@ -60,11 +61,18 @@ function Home() {
                     <h1 className={titleSlide2}>Tams</h1>
                 </div>
                 <div className="header-info">
-                    <p>BLah blah blah</p>
+                    <p>Full Stack Web Developer</p>
+                    <Button
+                        style={{ width: "100%", height: "60px" }}
+                        variant="contained"
+                        onClick={() => {
+                            ref.current.scrollIntoView({ behavior: "smooth" });
+                        }}>
+                        View My Work
+                    </Button>
                 </div>
             </div>
         </div>
     );
-}
-
+});
 export default Home;

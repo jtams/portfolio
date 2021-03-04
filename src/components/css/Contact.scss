@@ -1,0 +1,65 @@
+form {
+    display: grid;
+    width: 80%;
+    padding-bottom: 200px;
+    max-width: 1000px;
+    min-width: 350px;
+    margin: auto;
+    grid-template:
+        "name-label name-field" 50px
+        "email-label email-field" 50px
+        "message-label message-field" 150px
+        "submit submit" 50px /
+        1fr 5fr;
+    gap: 20px;
+
+    label {
+        color: white;
+        font-size: 24px;
+    }
+
+    input {
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        text-indent: 8px;
+    }
+
+    textarea {
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        text-indent: 8px;
+    }
+
+    button {
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+}
+
+#submit-message {
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        grid-template:
+            "name-label" 50px
+            "name-field" 50px
+            "." 40px
+            "email-label" 50px
+            "email-field" 50px
+            "." 40px
+            "message-label" 50px
+            "message-field" 150px
+            "." 40px
+            "submit" 50px /
+            95%;
+        gap: 0px;
+    }
+}

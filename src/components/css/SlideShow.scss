@@ -1,0 +1,26 @@
+* {
+    overflow-x: hidden;
+}
+
+.projectContainer {
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    margin-top: 220px;
+    justify-content: space-around;
+    row-gap: 100px;
+    max-width: 1900px;
+    flex-wrap: wrap;
+    .project {
+        text-align: center;
+        h2 {
+            text-align: center;
+            color: white;
+            margin-top: 5px;
+        }
+        .projectDesc {
+            width: 600px;
+        }
+    }
+}

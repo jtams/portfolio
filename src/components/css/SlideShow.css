@@ -1,0 +1,25 @@
+* {
+  overflow-x: hidden;
+}
+
+.projectContainer {
+  width: 90%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  row-gap: 100px;
+  max-width: 1900px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projectContainer .project h2 {
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=SlideShow.css.map */
